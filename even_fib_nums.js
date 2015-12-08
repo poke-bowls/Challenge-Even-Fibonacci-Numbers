@@ -11,15 +11,25 @@ module.exports = {
 };
 
 function _sumFibs( maxFibValue ) {
-  var sum = 0;
-
-  // do your work here
-
+  var a = 0,
+      i = 1,
+      b = 0,
+      sum = 0;
+  while (i <= maxFibValue) {
+    if(b % 2 === 0) {
+      sum += b;
+    }
+    b = a + i;
+    a = i;
+    i = b;
+  }
   return sum;
 }
 
+
+
 // bonus round
-function highestFibonacciNumber (maxFibValue){
+function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
 
   //define your base case, validate your input
